@@ -1,0 +1,381 @@
+[
+    {
+        "domain": "lenta.com",
+        "expiry": 1681925251,
+        "httpOnly": false,
+        "name": "tmr_detect",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "0%7C1681838851534"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1716398849,
+        "httpOnly": false,
+        "name": "_ga_W13W5LK7W5",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "GS1.1.1681838780.1.1.1681838849.0.0.0"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1716398849,
+        "httpOnly": false,
+        "name": "_ga_QB4J0GGLM",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "GS1.1.1681838780.1.1.1681838849.0.0.0"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1716398845,
+        "httpOnly": false,
+        "name": "CitySubDomainCookie",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "lpc"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1716398845,
+        "httpOnly": false,
+        "name": "StoreSubDomainCookie",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "0188"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1716398863,
+        "httpOnly": false,
+        "name": "_ga",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "GA1.2.1237961179.1681838780"
+    },
+    {
+        "domain": "lenta.com",
+        "expiry": 1716398845,
+        "httpOnly": true,
+        "name": "Store",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "0188"
+    },
+    {
+        "domain": "lenta.com",
+        "expiry": 1716398845,
+        "httpOnly": false,
+        "name": "CityCookie",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "lpc"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1716398849,
+        "httpOnly": false,
+        "name": "_ga_Z9D3HDRHYG",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "GS1.1.1681838780.1.1.1681838849.0.0.0"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1681910783,
+        "httpOnly": false,
+        "name": "_ym_isad",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "2"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1716398849,
+        "httpOnly": false,
+        "name": "_ga_QB4J0GGLMG",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "GS1.1.1681838780.1.1.1681838849.0.0.0"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1716398782,
+        "httpOnly": false,
+        "name": "KFP_DID",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "b5e0d44a-4d68-81e8-85b7-85277565231f"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1687022925,
+        "httpOnly": false,
+        "name": "oxxfgh",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "1adfa6b6-f502-4a49-af6f-0a170f0635cf#0#5184000000#5000#1800000#44965"
+    },
+    {
+        "domain": "lenta.com",
+        "expiry": 1710609980,
+        "httpOnly": false,
+        "name": "flocktory-uuid",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "e8a0ce84-9b32-454c-8630-704f9c257cf4-9"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1715534780,
+        "httpOnly": false,
+        "name": "_ttp",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "hlgcfAsJwOTee1bu2aLfcS7Pyd8"
+    },
+    {
+        "domain": "lenta.com",
+        "expiry": 1716398845,
+        "httpOnly": true,
+        "name": "DeliveryOptions",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "Pickup"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1715534780,
+        "httpOnly": false,
+        "name": "_tt_enable_cookie",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "1"
+    },
+    {
+        "domain": "lenta.com",
+        "expiry": 1713374849,
+        "httpOnly": false,
+        "name": "_ymab_param",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "XWIBvl0oMHK8ZrhwUK7lICuEyaUlaYvrF2qNoiVxXPAb5MkDixtKTFRFymvZCKwssSKwfczdVtYP961BFrs8Vk7mhv8"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1681925263,
+        "httpOnly": false,
+        "name": "_gid",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "GA1.2.209366079.1681838780"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1710610048,
+        "httpOnly": false,
+        "name": "tmr_lvidTS",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "1681838780188"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1681840648,
+        "httpOnly": false,
+        "name": "_ym_visorc",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "b"
+    },
+    {
+        "domain": "lenta.com",
+        "expiry": 1713374779,
+        "httpOnly": true,
+        "name": "cookiesession1",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "678B286D42B5ABE62A0227773757477C"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1716398780,
+        "httpOnly": false,
+        "name": "_tm_lt_sid",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1681838779742.857869"
+    },
+    {
+        "domain": "lenta.com",
+        "expiry": 1716398779,
+        "httpOnly": true,
+        "name": "CustomerId",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "fedeafd2d5c34a90a632d9250963c485"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1681840779,
+        "httpOnly": false,
+        "name": "qrator_ssid",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "1681838783.235.qUO7H7xzW5ZVXkdZ-9f706aka8mn192brfiu1age60jq20b7d"
+    },
+    {
+        "domain": "lenta.com",
+        "expiry": 1716398779,
+        "httpOnly": false,
+        "name": "GACustomerId",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "92404049b6224688aed3f7531190f309"
+    },
+    {
+        "domain": "lenta.com",
+        "expiry": 1716398779,
+        "httpOnly": true,
+        "name": "DontShowCookieNotification",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "true"
+    },
+    {
+        "domain": "lenta.com",
+        "expiry": 1716398845,
+        "httpOnly": true,
+        "name": "ShouldSetDeliveryOptions",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "False"
+    },
+    {
+        "domain": "lenta.com",
+        "expiry": 1704067200,
+        "httpOnly": false,
+        "name": "_a_d3t6sf",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "dufcw3UZ49VSQ876W3c0ncdF"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1710610048,
+        "httpOnly": false,
+        "name": "tmr_lvid",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "3aeafd311eb1f39bc1a0745cd054ae7a"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1713374779,
+        "httpOnly": false,
+        "name": "_ym_uid",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1681838780946759050"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1689614779,
+        "httpOnly": false,
+        "name": "_gcl_au",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "1.1.1877704714.1681838780"
+    },
+    {
+        "domain": "lenta.com",
+        "httpOnly": true,
+        "name": "ASP.NET_SessionId",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "5laeaarxrxsxmniej4cqzhjh"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1713374779,
+        "httpOnly": false,
+        "name": "_ym_d",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1681838780"
+    },
+    {
+        "domain": "lenta.com",
+        "expiry": 1716398848,
+        "httpOnly": true,
+        "name": "LastUpdate",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "2023-04-18"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1716398849,
+        "httpOnly": false,
+        "name": "_ga_9DV7ZS62RN",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "GS1.1.1681838780.1.1.1681838849.0.0.0"
+    },
+    {
+        "domain": ".lenta.com",
+        "expiry": 1681840779,
+        "httpOnly": false,
+        "name": "qrator_jsid",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "1681838782.704.EBd8OMeIKCSC0VqR-4qpg7nlik7srk2l43885nsgtu73vblrp"
+    },
+    {
+        "domain": "lenta.com",
+        "expiry": 1687838779,
+        "httpOnly": true,
+        "name": ".ASPXANONYMOUS",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "7-_bhvENDSSkHopZoCdFKaiPQ1f9uZ3RlPdZSd_4QNj9WY8JRgOPwtc09SKoMEl1DPZfq-uTCpNzhErXKPxBaiMP6UE3hePKgFVyCMMO8mRP_UA8CdewFWGtWh1f04GhiqSVyg2"
+    }
+]
