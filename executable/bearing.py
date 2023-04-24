@@ -190,6 +190,10 @@ def _get_pages(driver: uc.Chrome, cat_queue: one_queue, count: int, max_request:
         if 'Непредвиденная ошибка' in page_sourse:
             cat_queue.put(url_cat)
             break
+        if 'Bad gateway' in page_sourse:
+            cat_queue.put(url_cat)
+            break
+        
         
         # В случае если все хорошо, мы добавляем страницу и переходим к следующему адресу
         out_list.append(page_sourse)

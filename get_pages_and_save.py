@@ -44,6 +44,9 @@ def _worker_get_pages(in_Queue: mp_Queue, in_driver: initial_driver, results: li
                 page_sourse = driver.page_source
                 if 'Непредвиденная ошибка' in page_sourse:
                     break
+                if 'Bad gateway' in page_sourse:
+                    break
+                
                 # Получение очереди ссылок на страницы в текущей категории
                 cat_queue = _get_queue_cat(driver)
                 if cat_queue is None:
