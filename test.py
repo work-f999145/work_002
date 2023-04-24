@@ -21,9 +21,14 @@ def run_parser(func, lst):
         
 
 
-def run_driver(link):
+def run_driver(in_list):
+    
+    (browserWidth, browserHeight, browserLeft, browserTop), proxy, link = in_list
+    
     chrome_options = uc.ChromeOptions()
-    chrome_options.add_argument(f'--proxy-server={proxy_sel}')
+    chrome_options.add_argument(f'--proxy-server={proxy}')
+    chrome_options.add_argument(f"--window-position={browserLeft},{browserTop}")
+    chrome_options.add_argument(f"--window-size={browserWidth},{browserHeight}")
     driver = uc.Chrome(options=chrome_options)
     driver.get(link)
     time_sleep(10)
@@ -61,6 +66,9 @@ def run_driver(link):
     time_sleep(10)
 
 if __name__ == '__main__':
-    list_link = ['https://lenta.com/catalog/', 'https://lenta.com/catalog/', 'https://lenta.com/catalog/']
+    list_link = ['https://lenta.com/catalog/', 'https://lenta.com/catalog/']
+    browser_size = [(2560/2, 1300, -2560, 0), (2560/2, 1300, -1280, 0)]
+    proxy_list = ['45.81.76.252:8000', '45.139.110.3:8000 ']
+    in_list = zip(browser_size, proxy_list, list_link)
     
-    run_parser(run_driver, list_link)    
+    run_parser(run_driver, in_list)    
