@@ -46,6 +46,8 @@ def _worker_get_pages(in_Queue: mp_Queue, in_driver: initial_driver, results: li
                     break
                 # Получение очереди ссылок на страницы в текущей категории
                 cat_queue = _get_queue_cat(driver)
+                if cat_queue is None:
+                    break
                 
                 # получаем страници
                 out_list, cat_queue, count = _get_pages(driver, cat_queue, count)

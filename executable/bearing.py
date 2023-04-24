@@ -93,12 +93,15 @@ def select_sity(driver: uc.Chrome):
 
 
 
-def _get_pagination(driver: uc.Chrome) -> int:
+def _get_pagination(driver: uc.Chrome) -> int | None:
     """
         Получаем количество страниц на странице категории каталога
     """
-    
-    el = driver.find_element(by=By.CLASS_NAME, value='js-catalog-container')
+    try:
+        el = driver.find_element(by=By.CLASS_NAME, value='js-catalog-container')
+    except Exception as ex:
+        print('_get_pagination', ex)
+        return None
     catalog = json.loads(el.get_attribute('data-catalog-data'))
     pagination = math.ceil(catalog.get('skusCount')/catalog.get('limit'))
     return pagination
@@ -122,13 +125,15 @@ def _get_links_queue() -> mp_queue:
 
 
 
-def _get_queue_cat(driver: uc.Chrome) -> one_queue[str]:
+def _get_queue_cat(driver: uc.Chrome) -> one_queue[str] | None:
     """
         Получаем очередь с сылками на каждую страницу в категории каталога
     """
     
     page_url = driver.current_url
     pagination = _get_pagination(driver)
+    if pagination is None:
+        return None
     my_queue: one_queue[str] = one_queue()
     for key in range(1, pagination+1):
         my_queue.put(f'{page_url}?page={key}')
