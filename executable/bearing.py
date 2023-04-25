@@ -49,19 +49,19 @@ def select_sity(driver: uc.Chrome):
     try:
         element = wait.until(lambda d: d.find_element(by=By.CLASS_NAME, value='address-container__adress-icon-container'))
     except Exception as ex:
-        print('select_sity 52',ex)
+        print('!!!select_sity 52',ex)
     element.click()
     
     try:
         element = wait.until(lambda d: d.find_element(by=By.CLASS_NAME, value='store-picker-city__label'))
     except Exception as ex:
-        print('select_sity 58',ex)
+        print('!!!select_sity 58',ex)
     element.click()
     
     try:
         elements = wait.until(lambda d: d.find_elements(by=By.CSS_SELECTOR, value='span.cities-list-item__name'))
     except Exception as ex:
-        print('select_sity 64',ex)
+        print('!!!select_sity 64',ex)
     for el in elements:
         if 'Липецк' in el.text:
             el.click()
@@ -69,7 +69,7 @@ def select_sity(driver: uc.Chrome):
     try:
         elements = wait.until(lambda d: d.find_elements(by=By.CSS_SELECTOR, value='span.button__inner'))
     except Exception as ex:
-        print('select_sity 72',ex)
+        print('!!!select_sity 72',ex)
     for el in elements:
         if 'Магазины' in el.text:
             el.click()
@@ -78,7 +78,7 @@ def select_sity(driver: uc.Chrome):
     try:
         elements = wait.until(lambda d: d.find_element(by=By.CLASS_NAME, value='simplebar-content').find_elements(by=By.CLASS_NAME, value="stores-list-item__name"))
     except Exception as ex:
-        print('select_sity 81',ex)
+        print('!!!select_sity 81',ex)
     for el in elements:
         if 'ул. Катукова, д. 51' in el.text:
             el.click()
@@ -87,7 +87,7 @@ def select_sity(driver: uc.Chrome):
     try:
         element = driver.find_element(by=By.XPATH, value="//*[contains(text(), 'Выбрать магазин')]")
     except Exception as ex:
-        print('select_sity 90',ex)
+        print('!!!select_sity 90',ex)
     element.click()
     time_sleep(5)
 
@@ -151,7 +151,7 @@ def _save_pages(pages_list: list[str], name: str = 'lenta') -> None:
     formatted_date = now.strftime('%Y-%m-%d_%H-%M')
     with ZipFile(f'data/{formatted_date}-{name}.zip', 'w', compression=ZIP_DEFLATED, compresslevel=1) as zip_file:
         for index, page in enumerate(pages_list):
-            zip_file.writestr(f'{index:05d}.html', page)
+            zip_file.writestr(f'{index:05d}.html', page.encode())
 
 def _get_pages(driver: uc.Chrome, cat_queue: one_queue, count: int, max_request: int = 40) \
     -> tuple[list, one_queue, int]:
@@ -179,7 +179,7 @@ def _get_pages(driver: uc.Chrome, cat_queue: one_queue, count: int, max_request:
         if count >= max_request:
             cat_queue.put(url_cat)
             count = 0
-            break
+            return (out_list, cat_queue, count)
         
         # Производим запрос
         driver.get(url_cat)
@@ -189,10 +189,11 @@ def _get_pages(driver: uc.Chrome, cat_queue: one_queue, count: int, max_request:
         # При забросе получаем ошибку с сервера или блокирующий экран
         if 'Непредвиденная ошибка' in page_sourse:
             cat_queue.put(url_cat)
-            break
+            return (out_list, cat_queue, count)
+        
         if 'Bad gateway' in page_sourse:
             cat_queue.put(url_cat)
-            break
+            return (out_list, cat_queue, count)
         
         
         # В случае если все хорошо, мы добавляем страницу и переходим к следующему адресу
