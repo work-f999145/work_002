@@ -1,23 +1,13 @@
 from bs4 import BeautifulSoup as BS
-import undetected_chromedriver as uc
-import json
-from selenium.webdriver.common.by import By 
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.common.exceptions import TimeoutException, ElementNotVisibleException, ElementNotSelectableException, NoSuchElementException
-import re
-from time import sleep as time_sleep
-from queue import Queue
-import math
-from typing import NamedTuple
-from datetime import datetime
-from zipfile import ZipFile, ZIP_DEFLATED
+from zipfile import ZipFile
 from pathlib import Path
-import lxml
 import pandas as pd
 import numpy as np
 from multiprocessing import Pool
 from multiprocessing import cpu_count
 from sys import stdout, argv
+import lxml
+from datetime import datetime
 
 def _open_zip_file(path_to_file: Path) -> list[str]:
     pages_list = []
@@ -94,6 +84,18 @@ def run_parser(func, page_list: list[str]) -> pd.DataFrame:
         result = pd.concat(out_list, ignore_index=True, sort=False)
         return result
 
+def _save_data_frame(results: pd.DataFrame):
+    now = datetime.now()
+    formatted_date = now.strftime('%Y-%m-%d_%H-%M')
+    folder = Path('data')
+    file = f'{formatted_date}-lenta.zip'
+    path_to_file = folder.joinpath(file)
+    compression_opts = dict(method='zip', archive_name=f'{formatted_date}-lenta.csv')
+    results.to_csv(
+        path_to_file, 
+        index=False,
+        compression=compression_opts
+        )
 
 def main():
     path_to_file = Path(argv[1])
