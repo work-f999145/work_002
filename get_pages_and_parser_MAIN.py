@@ -2,6 +2,7 @@ from executable.config import drive_1, drive_2
 from multiprocessing import Manager, Process
 from executable.bearing_02 import  _get_links_queue, _worker_get_pages
 from executable.parser import _worker, run_parser, _save_data_frame
+from tqdm import tqdm
 
 """
     Главный парсер.
@@ -31,7 +32,6 @@ def get_pages_main() -> list[str]:
     # Список для возвращения данных
     manager = Manager()
     results = manager.list()
-    
     p1 = Process(target=_worker_get_pages, args=(the_queue, drive_1, results))
     p2 = Process(target=_worker_get_pages, args=(the_queue, drive_2, results))
     # Запуск процессов
@@ -40,6 +40,7 @@ def get_pages_main() -> list[str]:
     # Ждем окончание процессов
     p1.join()
     p2.join()
+    
     
     # final_results = sum(results, [])
     # _save_pages(final_results)

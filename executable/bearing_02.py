@@ -14,6 +14,7 @@ from time import sleep as time_sleep
 from queue import Queue as one_queue
 from multiprocessing import Queue as mp_queue
 from random import randint
+from tqdm import tqdm
 
 
 
@@ -304,6 +305,7 @@ def _worker_get_pages(in_Queue: mp_queue, in_driver: initial_driver, results: li
             if condition:
                 results.append(driver.page_source)
                 url = None
+                # qbar.update(1)
                 break 
             else:
                 break
