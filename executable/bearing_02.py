@@ -18,13 +18,14 @@ from tqdm import tqdm
 
 
 
-def _start_driver(initial:initial_driver) -> uc.Chrome:
+def _start_driver(initial:initial_driver, iproxy: bool = False) -> uc.Chrome:
     # Запуск Скрытного Браузера Chrome
     # Запускаем с опциями
     chrome_options = uc.ChromeOptions()
     
-    # Запускаем через прокси сервер
-    chrome_options.add_argument(f'--proxy-server={initial.proxy}')
+    if iproxy:
+        # Запускаем через прокси сервер
+        chrome_options.add_argument(f'--proxy-server={initial.proxy}')
 
     # Указываем местоположение на экране и размер экрана
     chrome_options.add_argument(f"--window-position={initial.browserLeft},{initial.browserTop}")
@@ -256,7 +257,7 @@ def _download_more(driver: uc.Chrome) -> bool:
 
 
 
-def _worker_get_pages(in_Queue: mp_queue, in_driver: initial_driver, results: list) -> None:
+def _worker_get_pages(in_Queue: mp_queue, in_driver: initial_driver, results: list, iproxy: bool = False) -> None:
     """
         Воркер, который работает через multiprocessing.Process
         Состоит из двух вложенных циклов.
@@ -274,7 +275,7 @@ def _worker_get_pages(in_Queue: mp_queue, in_driver: initial_driver, results: li
     
     while premiere:
         # Запуск экземпляра Google Chrome
-        driver = _start_driver(in_driver)
+        driver = _start_driver(in_driver, iproxy)
         # Переход на интерисующий нас магазин
         if not select_sity(driver):
             driver.quit()

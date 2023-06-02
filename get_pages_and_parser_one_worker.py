@@ -32,14 +32,14 @@ def get_pages_main() -> list[str]:
     # Список для возвращения данных
     manager = Manager()
     results = manager.list()
-    p1 = Process(target=_worker_get_pages, args=(the_queue, drive_1, results, True))
-    p2 = Process(target=_worker_get_pages, args=(the_queue, drive_2, results, True))
+    p1 = Process(target=_worker_get_pages, args=(the_queue, drive_1, results, False))
+    # p2 = Process(target=_worker_get_pages, args=(the_queue, drive_2, results))
     # Запуск процессов
     p1.start()
-    p2.start()
+    # p2.start()
     # Ждем окончание процессов
     p1.join()
-    p2.join()
+    # p2.join()
     
     
     # final_results = sum(results, [])
