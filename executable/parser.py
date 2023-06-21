@@ -78,7 +78,7 @@ def _worker(page: str) -> list[pd.DataFrame]:
 
 
 def run_parser(func, page_list: list[str]) -> pd.DataFrame:
-    with Pool(cpu_count()) as pool:
+    with Pool(cpu_count()//2) as pool:
         out_list_list = pool.map(func=func, iterable=page_list)
         out_list = sum(out_list_list, [])
         result = pd.concat(out_list, ignore_index=True, sort=False)
