@@ -28,7 +28,7 @@ def _start_driver(initial:initial_driver) -> uc.Chrome:
     chrome_options.add_argument(f"--window-size={initial.browserWidth},{initial.browserHeight}")
 
     # Запускаем сам ChromeDriver
-    driver = uc.Chrome(options=chrome_options)
+    driver = uc.Chrome(driver_executable_path='driver/chromedriver.exe', options=chrome_options)
 
     # Запрашиваем стартувыю страницу
     driver.get(initial.start_url)
